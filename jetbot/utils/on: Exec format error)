@@ -1,0 +1,15 @@
+[0;1;31m●[0m jetbot_start.service - JetBot start service
+   Loaded: [0;1;31merror[0m (Reason: Exec format error)
+   Active: [0;1;31mfailed[0m (Result: exit-code) since Thu 2020-04-02 16:37:29 CST; 3min 11s ago
+ Main PID: 7097 (code=exited, status=1/FAILURE)
+
+4月 02 16:37:28 jetbot-desktop python3[7097]:   File "/usr/local/lib/python3.6/dist-packages/pyserial-3.4-py3.6.egg/serial/serialposix.py", line 291, in open
+4月 02 16:37:28 jetbot-desktop python3[7097]: serial.serialutil.SerialException: [Errno 13] could not open port /dev/ttyTHS1: [Errno 13] Permission denied: '/dev/ttyTHS1'
+4月 02 16:37:28 jetbot-desktop python3[7097]: Exception ignored in: <bound method ServoSerial.__del__ of <servoserial.ServoSerial object at 0x7f51ebfcc0>>
+4月 02 16:37:28 jetbot-desktop python3[7097]: Traceback (most recent call last):
+4月 02 16:37:28 jetbot-desktop python3[7097]:   File "/home/jetbot/yahboom-jetbot/servoserial.py", line 23, in __del__
+4月 02 16:37:28 jetbot-desktop python3[7097]:     self.ser.close()
+4月 02 16:37:28 jetbot-desktop python3[7097]: AttributeError: 'ServoSerial' object has no attribute 'ser'
+4月 02 16:37:29 jetbot-desktop systemd[1]: [0;1;39m[0;1;31m[0;1;39mjetbot_start.service: Main process exited, code=exited, status=1/FAILURE[0m
+4月 02 16:37:29 jetbot-desktop systemd[1]: [0;1;39m[0;1;31m[0;1;39mjetbot_start.service: Failed with result 'exit-code'.[0m
+4月 02 16:39:34 jetbot-desktop systemd[1]: [0;1;31m[0;1;39m[0;1;31m/etc/systemd/system/jetbot_start.service:9: Executable path is not absolute: sudo /usr/bin/python3 /home/jetbot/yahboom-jetbot/yahboom-jetbot.pyc[0m

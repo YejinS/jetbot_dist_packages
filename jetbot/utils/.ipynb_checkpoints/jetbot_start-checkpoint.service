@@ -1,0 +1,12 @@
+
+[Unit]
+Description=JetBot start service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /home/jetbot/yahboom-jetbot/yahboom-jetbot.pyc
+WorkingDirectory=/home/jetbot/yahboom-jetbot
+
+[Install]
+WantedBy=multi-user.target
